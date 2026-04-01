@@ -19,7 +19,12 @@ function showToast(msg) {
 function formatValue(v, type) {
   if (type === 'bool') return v ? 'true' : 'false';
   if (type === 'select') return typeof v === 'string' ? `"${v}"` : v;
-  if (typeof v === 'string') return `"${v}"`;
+  if (typeof v === 'string') {
+    const t = v.trim();
+    // Already a TOML array — emit raw, no surrounding quotes
+    if (t.startsWith('[')) return t;
+    return `"${v}"`;
+  }
   return v;
 }
 
