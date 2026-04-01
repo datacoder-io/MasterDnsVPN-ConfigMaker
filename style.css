@@ -205,6 +205,79 @@ body {
     background: rgba(56, 189, 248, 0.15);
 }
 
+.btn-github-cm {
+    color: var(--accent-light);
+    background: rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.btn-github-cm:hover {
+    background: rgba(99, 102, 241, 0.16);
+    border-color: var(--accent);
+    color: white;
+}
+
+/* Version badge next to logo */
+.ver-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--green);
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.25);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* Version compatibility banner */
+.ver-banner {
+    position: relative;
+    z-index: 89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 24px;
+    background: rgba(52, 211, 153, 0.05);
+    border-bottom: 1px solid rgba(52, 211, 153, 0.12);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.ver-banner strong {
+    color: var(--green);
+    font-weight: 600;
+    direction: ltr;
+    display: inline-block;
+}
+
+.ver-banner a {
+    color: var(--accent-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.ver-banner a:hover { color: white; text-decoration: underline; }
+
+.ver-banner-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s infinite;
+}
+
+.ver-sep { color: var(--text-muted); opacity: 0.5; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--green); }
+    50% { opacity: 0.6; box-shadow: 0 0 4px var(--green); }
+}
+
 /* --- Tab Switcher --- */
 .tab-container {
     position: sticky;
